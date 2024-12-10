@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import s from './Header.module.scss';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +18,7 @@ const Header = () => {
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+           <li><Link to={'/admin'}>Admin</Link></li>
           </ul>
         </nav>
         <button className={s.burger} onClick={toggleMenu}>
